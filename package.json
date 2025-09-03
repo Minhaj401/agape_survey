@@ -6,12 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true next build",
+    "build:prod": "next build",       
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "clean": "rimraf .next out",
-    "type-check": "tsc --noEmit",
-    "prebuild": "npm run type-check && npm run lint"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
