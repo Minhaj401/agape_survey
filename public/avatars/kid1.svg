@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Kid 1 avatar">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E3F2FD"/>
+      <stop offset="50%" stop-color="#FCE4EC"/>
+      <stop offset="100%" stop-color="#FFF8E1"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd7b3"/>
+      <stop offset="100%" stop-color="#f4bf97"/>
+    </linearGradient>
+    <linearGradient id="jacketBlue" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3D5AFE"/>
+      <stop offset="100%" stop-color="#2C3CCB"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFEB3B"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="24" fill="url(#bg1)"/>
+  <!-- Confetti -->
+  <circle cx="34" cy="40" r="6" fill="#FF4081"/>
+  <circle cx="286" cy="46" r="5" fill="#00B8D4"/>
+  <circle cx="56" cy="288" r="5" fill="#FFAB00"/>
+  <circle cx="280" cy="280" r="6" fill="#00C853"/>
+  <path d="M44 108l10 6-10 6-10-6z" fill="#7A7CFF"/>
+  <path d="M276 222l10 6-10 6-10-6z" fill="#FF79A8"/>
+
+  <!-- Head -->
+  <circle cx="160" cy="110" r="60" fill="url(#skin)"/>
+  <!-- Hair -->
+  <path d="M100 110c0-38 28-62 60-62s60 24 60 62c-10-10-26-18-60-18s-50 8-60 18z" fill="#4e342e"/>
+  <!-- Eyes -->
+  <circle cx="140" cy="110" r="6" fill="#3a2a20"/>
+  <circle cx="180" cy="110" r="6" fill="#3a2a20"/>
+  <!-- Smile -->
+  <path d="M135 132c8 10 42 10 50 0" stroke="#3a2a20" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Colorful school jacket -->
+  <path d="M90 182c24 10 52 16 70 16s46-6 70-16v94H90z" fill="url(#jacketBlue)"/>
+  <!-- White shirt under jacket -->
+  <rect x="115" y="174" width="90" height="70" rx="10" fill="#FFFFFF"/>
+  <!-- Tie -->
+  <rect x="155" y="174" width="10" height="38" fill="#FF4081"/>
+  <path d="M160 210l-16 18 16 22 16-22z" fill="#FF79A8"/>
+  <!-- Badge -->
+  <circle cx="226" cy="210" r="10" fill="url(#gold)" stroke="#F57F17"/>
+  <path d="M226 204l2.5 5h5l-4 3 1.5 5-4.5-3-4.5 3 1.5-5-4-3h5z" fill="#F57F17"/>
+
+  <!-- Hands (peeking) -->
+  <circle cx="110" cy="240" r="10" fill="url(#skin)"/>
+  <circle cx="210" cy="240" r="10" fill="url(#skin)"/>
+</svg>
+

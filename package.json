@@ -1,0 +1,43 @@
+{
+  "name": "agapequiz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:analyze": "cross-env ANALYZE=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "clean": "rimraf .next out",
+    "type-check": "tsc --noEmit",
+    "prebuild": "npm run type-check && npm run lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@mui/material-nextjs": "^7.3.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "framer-motion": "^12.23.12",
+    "next": "15.4.6",
+    "nodemailer": "^7.0.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.12.1",
+    "@next/bundle-analyzer": "^15.4.6",
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20.11.30",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.4.6",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.2"
+  }
+}
