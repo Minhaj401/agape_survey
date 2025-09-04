@@ -73,20 +73,58 @@ export async function POST(req: NextRequest) {
   /** ------------------------
    *  4. Send Email
    * ------------------------- */
-  const htmlContent = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 8px; background: #fafafa;">
-      <h2 style="color: #1976d2; text-align: center; margin-bottom: 20px;">Personality Quiz Result</h2>
+const htmlContent = `
+  <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto; padding: 24px; border: 1px solid #eaeaea; border-radius: 12px; background: #ffffff;">
+    <h2 style="color: #1976d2; text-align: center; margin-bottom: 20px;">
+      Personality Quiz Result
+    </h2>
+
+    <div style="margin-bottom: 20px; font-size: 16px; color: #333;">
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Age:</strong> ${age}</p>
-      <h3 style="margin-top: 20px; color: #333;">Result</h3>
-      <pre style="background: #f4f4f4; padding: 12px; border-radius: 6px; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">
-${JSON.stringify(result, null, 2)}
-      </pre>
-      <p style="font-size: 12px; color: #777; text-align: center; margin-top: 30px;">
-        This email was generated automatically by Agape Quiz.
-      </p>
     </div>
-  `;
+
+    <div style="margin-bottom: 20px;">
+      <h3 style="color: #1976d2; margin-bottom: 10px;">Trait Scores</h3>
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        ${Object.entries(result.traits)
+          .map(
+            ([trait, score]) => `
+          <tr>
+            <td style="padding: 8px; border: 1px solid #eaeaea; text-transform: capitalize;">
+              ${trait.replace("_", " ")}
+            </td>
+            <td style="padding: 8px; border: 1px solid #eaeaea; text-align: right;">
+              ${score}
+            </td>
+          </tr>`
+          )
+          .join("")}
+      </table>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h3 style="color: #1976d2; margin-bottom: 10px;">Dominant Trait</h3>
+      <div style="padding: 12px; background: #f4f8ff; border-left: 4px solid #1976d2; border-radius: 6px; font-size: 15px; color: #333;">
+        ${result.dominantTrait.replace("_", " ")}
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h3 style="color: #1976d2; margin-bottom: 10px;">Suggestions</h3>
+      <ul style="padding-left: 20px; font-size: 14px; color: #333; line-height: 1.6;">
+        ${result.suggestions
+          .map((s: string) => `<li style="margin-bottom: 6px;">${s}</li>`)
+          .join("")}
+      </ul>
+    </div>
+
+    <p style="font-size: 12px; color: #777; text-align: center; margin-top: 30px;">
+      This email was generated automatically by Agape Quiz.
+    </p>
+  </div>
+`;
+
 
   const mailOptions = {
     from: `"Agape Quiz" <${process.env.EMAIL_USER}>`,
