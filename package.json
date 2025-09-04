@@ -13,19 +13,20 @@
     "clean": "rimraf .next out",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.1",
-    "@mui/material": "^7.3.1",
-    "@mui/material-nextjs": "^7.3.0",
-    "@tailwindcss/postcss": "^4.1.12",
-    "framer-motion": "^12.23.12",
-    "next": "15.4.6",
-    "nodemailer": "^7.0.5",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
+ "dependencies": {
+  "@emotion/react": "^11.14.0",
+  "@emotion/styled": "^11.14.1",
+  "@mui/icons-material": "^7.3.1",
+  "@mui/material": "^7.3.1",
+  "@mui/material-nextjs": "^7.3.0",
+  "@tailwindcss/postcss": "^4.1.12",
+  "framer-motion": "^12.23.12",
+  "next": "15.4.6",
+  "nodemailer": "^7.0.5",
+  "react": "19.1.0",
+  "react-dom": "19.1.0",
+  "googleapis": "^144.0.0"   // 👈 new
+},
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^15.4.6",
