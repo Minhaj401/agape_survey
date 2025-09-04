@@ -25,7 +25,7 @@
   "nodemailer": "^7.0.5",
   "react": "19.1.0",
   "react-dom": "19.1.0",
-  "googleapis": "^144.0.0"   // 👈 new
+  "googleapis": "^144.0.0" 
 },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.12.1",
