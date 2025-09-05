@@ -31,14 +31,16 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStartQuiz }) => {
         >
 
           <Typography variant="h1" gutterBottom>
-            Welcome to Agape Quiz
+            Welcome to Agape Quiz!
           </Typography>
           <Typography variant="h5" color="text.secondary" paragraph>
-            Exploring Parental Perception in Personality Development Programs for Kids
+            Discovering the Amazing You ✨
           </Typography>
           <Typography variant="body1" paragraph sx={{ mt: 3, mb: 4 }}>
-            Dear parent,
-            We&apos;re committed to supporting the growth and development of children, and we want to hear from you! This survey is designed to understand your values, priorities, and interests in providing your child with the best possible opportunities for success. Your feedback will be invaluable in helping us create programs that meet the needs of parents and children like yours. Please take a few minutes to share your thoughts with us.
+            Hey there, superstar! 🎉 This quiz is all about <strong>you</strong>—your ideas,
+            your dreams, and the fun things that make you unique. By answering these
+            questions, you’ll help us learn more about what kids like you enjoy and what
+            makes you shine. 🌈🌟 Are you ready to play and discover how awesome you are?
           </Typography>
           <Button
             component={motion.button}
@@ -55,11 +57,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStartQuiz }) => {
               // transition is handled by Framer Motion's whileHover
             }}
           >
-            Start Test
+            Start Quiz 🚀
           </Button>
           <Box sx={{ mt: 6, fontStyle: 'italic', color: 'text.secondary' }}>
             <Typography variant="body2">
-              &ldquo;Every child is a unique kind of flower, and all together, they make this world a beautiful garden.&rdquo; - Unknown
+              &ldquo;Every child is a unique kind of flower, and all together, they make this world a beautiful garden.&rdquo; 🌸🌻🌼
             </Typography>
           </Box>
         </Box>
